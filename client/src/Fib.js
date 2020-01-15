@@ -29,7 +29,7 @@ class Fib extends Component {
     event.preventDefault();
 
     await axios.post('/api/values', {
-      index: this.state.index
+      index: parseInt(this.state.index)
     });
     this.setState({ index: '' });
   };
